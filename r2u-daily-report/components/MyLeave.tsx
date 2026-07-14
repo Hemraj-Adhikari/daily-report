@@ -51,20 +51,22 @@ export default function MyLeave() {
               key={b.type}
               label={b.label}
               dotColor={TYPE_DOT[b.type]}
-              value={b.total.toFixed(2)}
+              value={
+                <span>
+                  {b.used.toFixed(0)}
+                  <span className="text-base font-medium text-[var(--muted)]">
+                    /{b.total.toFixed(0)}
+                  </span>
+                </span>
+              }
               sub={
                 <div className="flex items-center justify-between text-xs">
+                  <span className="text-[var(--muted)]">Taken</span>
                   <span>
-                    <span className="font-semibold text-[var(--status-refused)]">
-                      {b.used.toFixed(2)}
+                    <span className="font-semibold text-[var(--status-scheduled)]">
+                      {balance.toFixed(0)}
                     </span>{" "}
-                    <span className="text-[var(--muted)]">Used</span>
-                  </span>
-                  <span>
-                    <span className="font-semibold text-[var(--status-completed)]">
-                      {balance.toFixed(2)}
-                    </span>{" "}
-                    <span className="text-[var(--muted)]">Balance</span>
+                    <span className="text-[var(--muted)]">Pending</span>
                   </span>
                 </div>
               }
