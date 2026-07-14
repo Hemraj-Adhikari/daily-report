@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Daily reports: anyone on the team link can read (for the History /
+    // analytics view) and write (to log tasks). Tighten this once you add
+    // real login (Firebase Auth) — see README "Locking it down" section.
+    match /dailyReports/{reportId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}
