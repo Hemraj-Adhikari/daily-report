@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  /* ---- Sidebar (dark navy/teal — matches R2U cap tone) ---- */
+  --nav-bg: #122824;
+  --nav-bg-soft: #1a3733;
+  --nav-fg: #d9e6e3;
+  --nav-muted: #7fa19d;
+  --nav-line: #234444;
+
+  /* ---- Main content (light theme — matches the CRM portal) ---- */
+  --page-bg: #f2f4f3;
+  --card-bg: #ffffff;
+  --card-border: #e6e9e8;
+  --ink: #10231f;        /* headings / primary text */
+  --muted: #64766f;      /* secondary text */
+
+  /* ---- Brand accents ---- */
+  --gold: #d3a215;
+  --gold-bright: #e8bb3d;
+  --gold-soft: #fbf1d9;
+
+  --status-scheduled: #d98c2b;
+  --status-scheduled-bg: #fdf0e0;
+  --status-completed: #16a34a;
+  --status-completed-bg: #e5f6ec;
+  --status-refused: #dc2626;
+  --status-refused-bg: #fdeaea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--page-bg);
+  color: var(--ink);
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+.font-label {
+  font-family: var(--font-body), sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+::selection {
+  background: var(--gold);
+  color: #10231f;
+}
+
+@keyframes flap {
+  0% { transform: rotateX(0deg); }
+  45% { transform: rotateX(-90deg); }
+  55% { transform: rotateX(-90deg); }
+  100% { transform: rotateX(0deg); }
+}
+
+.flap-flip {
+  animation: flap 0.4s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flap-flip { animation: none; }
+}
