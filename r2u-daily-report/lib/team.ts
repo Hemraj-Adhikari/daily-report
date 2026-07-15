@@ -9,14 +9,14 @@ import { TeamMember } from "./types";
 // images provided — if any of those hidden names should log tasks here too,
 // send the rest of the list and they can be added.
 export const TEAM_MEMBERS: TeamMember[] = [
-  { id: "hemraj", name: "Hemraj ", role: "IT Officer / Cloud Infra" },
+  { id: "hemraj", name: "Hemraj ", role: "IT Officer /Admin" },
   { id: "jitendra", name: "Jitendra", role: "IT Team" },
   { id: "admin", name: "Admin", role: "IT Team" },
   { id: "czan", name: "Czan", role: "IT Team" },
-  { id: "anjali", name: "Anjali ", role: "Group Admin" },
+  { id: "anjali", name: "Anjali ", role: "Worcester Team" },
   { id: "abinash", name: "Abinash", role: "Worcester Team" },
-  { id: "anusha", name: "Anusha ", role: "Route 2 Uni" },
-  { id: "bishesh", name: "Bishesh", role: "Route 2 Uni" },
+  { id: "anusha", name: "Anusha ", role: "UEL Team" },
+  { id: "bishesh", name: "Bishesh", role: "UEL Team" },
   { id: "karmu", name: "Karmu ", role: "Route 2 Uni" },
   { id: "lasta", name: "Lasta ", role: "Worcester Team" },
   { id: "niva", name: "Niva", role: "Worcester Team" },
